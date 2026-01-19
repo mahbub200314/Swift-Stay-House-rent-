@@ -1,26 +1,92 @@
 @import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+:root{
+  --background1 :#DDE4E7;
+  --primaryText : black;
+  --textSecondary :#cbd5f5;
+  --navbar-gradient: linear-gradient(to right, #f8fafc, #e2e8f0);
+    --hero-gradient: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #eef2f7 40%,
+    #e2e8f0 100%
+  );
+  /* 🔤 HERO TEXT (LIGHT) */
+  --hero-heading: #0f172a;       /* slate-900 */
+  --hero-subtitle: #334155;      /* slate-700 */
+  --hero-muted: #64748b;         /* slate-500 */
+  --hero-accent: #22c55e;        /* emerald-500 */
+  --testimonialCardbg: #f0f0f0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark{
+--background1:#10072d;
+--primaryText:white;
+--textSecondary :#cbd5f5;
+--navbar-gradient: linear-gradient(to right, #0f172a, #1e293b);
+--hero-gradient: linear-gradient(
+    135deg,
+    #020617 0%,
+    #020617 30%,
+    #020617 100%
+  );
+  /* 🔤 HERO TEXT (DARK) */
+  --hero-heading: #f8fafc;       /* slate-50 */
+  --hero-subtitle: #cbd5f5;      /* slate-300 */
+  --hero-muted: #94a3b8;         /* slate-400 */
+  --hero-accent: #34d399;        /* emerald-400 */  
+  --testimonialCardbg: #f0f0f0;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme inline{
+  --color-background1:var(--background1);
+  --color-navbar-gradient: var(--navbar-gradient);
+  --color-hero-gradient: var(--hero-gradient);
+  --color-testimonialCardBg : var(--testimonialCardbg);
+
+  
+  --color-primaryText: var(--primaryText);
+  --color-textSecondary : var(--textSecondary );
+
+ 
+}
+
+@layer component{
+  body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+
+  nav ul li{
+    @apply relative  py-6 cursor-pointer  transition duration-300 hover:text-blue-500 max-lg:border-b-1 max-lg:border-gray-500 max-lg:text-center max-lg:w-full
+  }
+  nav  .menu{
+    @apply absolute
+  }
+
+  h1{
+    @apply text-[5rem] max-xl:text-[4rem] max-md:text-[3rem] font-bold tracking-tight  
+  }
+
+  header{
+    @apply text-center  mb-6 
+  }
+  header h2{
+    @apply font-bold text-[2.5vw] text-primaryText 
+  }
+  header h4{
+    @apply text-[1.5rem] text-gray-500
+  }
+  nav{
+    background: var(--navbar-gradient);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+

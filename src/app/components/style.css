@@ -1,0 +1,18 @@
+
+.hero {
+  margin-top: -110px;
+
+
+
+}
+
+/* Text Gradient CSS */
+/* Text Gradient CSS */
+.text-gradient {
+  color: #5aed7a;
+  background-image: linear-gradient(45deg, #5aed7a , #6fa09e 50%, #319b73 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
