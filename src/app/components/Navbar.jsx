@@ -42,7 +42,7 @@ const Navbar = () => {
          ref={navRef}
          className={`${isFixed ? 'fixed top-0 left-0 right-0 w-full px-[2.5%] rounded-none' : 'sticky top-0 mx-[2.5%] rounded-[1rem]'} shadow-lg text-primaryText flex items-center justify-between h-[90px] z-[99999] transition-all duration-300 p-[2%]`}
        >
-         <Image src={logo}  width={70} /> 
+         <Image src={logo}  width={70} alt='logo' /> 
            
             <ul className={` lg:flex gap-6 text-background text-[1.3rem] tracking-tight items-center
                             ${show ? "flex-col ":"max-lg:hidden"} max-lg:absolute max-lg:top-[5.5rem] max-lg:bg-background1 max-lg:text-primaryText top-0 left-0 right-0  max-lg:shadow-md`}>

@@ -16,3 +16,19 @@
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
+
+.howwork{
+  min-height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/realtor.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.hide-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+.hide-scrollbar{
+  scrollbar-width: none;
+}

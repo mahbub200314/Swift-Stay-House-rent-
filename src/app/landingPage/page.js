@@ -1,8 +1,8 @@
 import ClientReview from "../clientReview/page"
 import Hero from "../components/Hero"
-import Properties from "../Properties/page"
+import Properties from "../components/Properties"
 import ServicesPage from "../ServicesPage/page"
-
+import HowItWork from "../components/HowItWork"
 
 
 const LandingPage = () => {
@@ -12,6 +12,7 @@ const LandingPage = () => {
         <Properties/>
         <ServicesPage/>
         <ClientReview/>
+        <HowItWork/>
     </div>
   )
 }

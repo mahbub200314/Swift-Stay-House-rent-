@@ -70,7 +70,7 @@ const card = {
 
 export default function ServicesPage() {
   return (
-    <section className="relative py-28 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 overflow-hidden">
+    <section className="relative py-28 px-10 max-sm:px-6 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
@@ -135,7 +135,7 @@ export default function ServicesPage() {
                   {s.title}
                 </h3>
 
-                <p className="text-[1.1vw] text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-[1.1rem] text-gray-600 dark:text-gray-400 leading-relaxed">
                   {s.desc}
                 </p>
 

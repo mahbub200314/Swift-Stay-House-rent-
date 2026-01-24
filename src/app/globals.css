@@ -76,7 +76,7 @@
   }
 
   header{
-    @apply text-center  mb-6 
+    @apply text-center  mb-6 pt-6 
   }
   header h2{
     @apply font-bold text-[2.5vw] text-primaryText 
