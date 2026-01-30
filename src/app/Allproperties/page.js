@@ -54,7 +54,7 @@ const Allproperties = () => {
     <div className="min-h-screen p-4 md:p-6 lg:p-10 bg-gray-50 dark:bg-gray-900">
       {/* Header */}
       <motion.header initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center mb-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">See All Featured Properties</h2>
+        <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">See All Featured Properties</h3>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm sm:text-lg">Explore our handpicked selection of premium rental properties</p>
       </motion.header>
 
@@ -138,9 +138,12 @@ const Allproperties = () => {
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">{property.title}</h3>
                   <div className="flex justify-between text-sm text-gray-600 dark:text-gray-300"><span>{property.sqft} sqft</span><span>{property.beds} Beds</span></div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">📍 {property.location}</p>
-                  <Link href="#"><motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="relative w-full py-2 sm:py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold overflow-hidden cursor-pointer"><span className="relative z-10">View Details</span><span className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700" /></motion.button></Link>
+                  <Link  key={property.id} href={`/propertiesDetails/${property.slug}`}>
+                  <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="relative w-full py-2 sm:py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold overflow-hidden cursor-pointer">
+                    <span className="relative z-10">View Details</span><span className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                  </motion.button></Link>
                 </div>
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-blue-500/40 transition-all duration-300 ease-in-out" />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-blue-500/40 transition-all duration-300 ease-in-out pointer-events-none" />
               </motion.div>
             ))}
           </motion.div>

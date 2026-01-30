@@ -132,8 +132,8 @@ const TrendingProperties = () => {
                   <span className="uppercase">{item.purpose}</span>
                 </div>
 
-                <Link
-                  href={`/properties/${item.id}`}
+                <Link key={item.id}
+                  href={`/propertiesDetails/${item.slug}`}
                   className="block text-center w-full py-3 rounded-xl
                              bg-white text-gray-900 font-semibold
                              transition hover:bg-gray-200"

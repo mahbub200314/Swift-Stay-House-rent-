@@ -50,7 +50,11 @@ const ClientReview = () => {
      
       <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-background1 to-transparent z-20" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-background1 to-transparent z-20" />
-
+          
+           {/* Background Glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[120px]" />
+      </div>
       {/* Header */}
       <div className="text-center mb-10 md:mb-14 px-4">
         <h2 className="text-2xl md:text-5xl font-bold text-primaryText mb-2">

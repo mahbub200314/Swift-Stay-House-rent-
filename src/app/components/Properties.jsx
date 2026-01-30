@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { properties } from "../data/propertiesData";
-import Button from "../components/Button";
 
 const Properties = () => {
   const containerVariants = {
@@ -119,22 +118,22 @@ const Properties = () => {
               </p>
 
               {/* Button */}
-              <Link href="#" className="">
+              <Link key={property.id} href={`/propertiesDetails/${property.slug}`} className="group w-full block cursor-pointer">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                // whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="relative mt-4 w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold overflow-hidden cursor-pointer"
               >
                 <span className="relative z-10 cursor-pointer ">View Details</span>
 
                 {/* Hover Shine */}
-                <span className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 " />
+                <span className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700  " />
               </motion.button>
               </Link>
             </div>
 
             {/* Glow Border */}
-            <div className="absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-blue-500/40 transition-all duration-300 ease-in-out" />
+            <div className="absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-blue-500/40 transition-all duration-300 ease-in-out pointer-events-none" />
           </motion.div>
         ))}
       </motion.div>

@@ -6,6 +6,7 @@ import logo from "../img/logo.png";
 import usericon from "../img/usericon.jpg";
 import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { RiLoginCircleFill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -128,6 +129,10 @@ const Navbar = () => {
 
       {/* RIGHT ICONS */}
       <div className="flex gap-4 items-center relative ">
+        <Link href="signin" className="font-bold text-[1.2rem]  hover:underline text-blue-500 border-2  px-3 py-1 rounded-[1.5rem] transition hover:scale-105">
+        LOGIN
+        </Link>
+       
         <Link href="/profile" className="rounded-full overflow-hidden">
           <Image src={usericon} alt="user" width={40} />
         </Link>

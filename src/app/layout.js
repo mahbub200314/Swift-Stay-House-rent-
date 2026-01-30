@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
-      <body className=" ">
+      <body className="bg-white dark:bg-black">
         <ThemeProvider>
           <Navbar/>
           {children}
