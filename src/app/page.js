@@ -8,7 +8,7 @@ export default function Home() {
    
 
   return (
-    <div className="relative min-h-[100vh] bg-background1" >
+    <div className="relative min-h-[100vh] bg-background1 overflow-x-hidden" >
     <LandingPage/>
       
       

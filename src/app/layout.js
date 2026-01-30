@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     
   return (
     <html lang="en">
-      <body className="bg-white dark:bg-black">
+      <body className="bg-white dark:bg-black overflow-x-hidden">
         <ThemeProvider>
           <Navbar/>
           {children}
