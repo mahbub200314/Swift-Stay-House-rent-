@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/context/ThemeContext";
 import Navbar from "./components/Navbar";
 import "./globals.css";
+import Footer from "./footer/page";
 
 export const metadata = {
   title: "Swift-Stay",
@@ -11,10 +12,11 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
-      <body className="bg-background1 pt-4">
+      <body className=" ">
         <ThemeProvider>
           <Navbar/>
           {children}
+          <Footer/>
         </ThemeProvider>
       </body>
     </html>

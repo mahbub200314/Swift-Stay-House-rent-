@@ -73,14 +73,17 @@ const Allproperties = () => {
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Filter Properties</h3>
           <div className="h-px bg-gray-200 dark:bg-gray-700 mb-4" />
           <div className="space-y-3">
-            <input type="text" placeholder="Search" value={search} onChange={e => setSearch(e.target.value)} className="w-full rounded-xl border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm" />
-            <select value={category} onChange={e => setCategory(e.target.value)} className="w-full rounded-xl border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm">
+            <input type="text" placeholder="Search" value={search} onChange={e => setSearch(e.target.value)} className="w-full  bg-background1  text-primaryText rounded-xl border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm" />
+            
+            <select value={category} onChange={e => setCategory(e.target.value)} className="w-full text-primaryText  bg-background1  rounded-xl border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm">
               <option value="all">All</option><option value="apartment">Apartment</option><option value="house">House</option><option value="family">Family</option><option value="studio">Studio</option><option value="commercial">Commercial</option>
             </select>
-            <select value={type} onChange={e => setType(e.target.value)} className="w-full rounded-xl border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm">
+            
+            <select value={type} onChange={e => setType(e.target.value)} className="w-full text-primaryText  bg-background1 rounded-xl border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm">
               <option value="all">Rent & Sale</option><option value="rent">Rent</option><option value="sale">Sale</option>
             </select>
-            <select value={sort} onChange={e => setSort(e.target.value)} className="w-full rounded-xl border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm">
+            
+            <select value={sort} onChange={e => setSort(e.target.value)} className="w-full text-primaryText bg-background1 rounded-xl border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm">
               <option value="default">Default</option><option value="low">Low → High</option><option value="high">High → Low</option>
             </select>
             <div className="flex items-center justify-between rounded-xl bg-gray-100 dark:bg-gray-700 px-3 py-2">

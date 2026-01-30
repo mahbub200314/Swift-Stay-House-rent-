@@ -33,7 +33,13 @@ const Properties = () => {
   };
 
   return (
-    <section className=" px-[3%] py-10 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+    <section className="relative px-[3%] py-10 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+      
+       {/* Background Glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-30 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[120px]" />
+      </div>
+      
       {/* Header */}
       <motion.header
         initial={{ opacity: 0, y: 30 }}
@@ -45,7 +51,7 @@ const Properties = () => {
         <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
           Featured Properties
         </h2>
-        <h4 className="mt-4 text-gray-600 dark:text-gray-400 text-lg">
+        <h4 className="mt-4 text-gray-600 dark:text-gray-400 text-md">
           Explore our handpicked selection of premium rental properties
         </h4>
       </motion.header>

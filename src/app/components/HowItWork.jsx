@@ -33,8 +33,13 @@ const steps = [
 
 const HowItWork = () => {
   return (
-    <section className="bg-hero-gradient py-24 px-[4%]">
-
+    <section className="relative bg-hero-gradient py-24 px-[4%]">
+      
+       {/* Background Glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[120px]" />
+      </div>
+      
       {/* Hero */}
       <header className="text-center max-w-3xl mx-auto mb-20">
         <h1 className="text-4xl md:text-5xl font-bold text-primaryText mb-4">
