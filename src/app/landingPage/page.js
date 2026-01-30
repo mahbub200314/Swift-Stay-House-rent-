@@ -5,6 +5,8 @@ import ServicesPage from "../ServicesPage/page"
 import HowItWork from "../components/HowItWork"
 import TrendingProperties from "../trendingProperties/page"
 import Blogs from "../components/Blogs"
+import OurAgents from "../components/OurAgents"
+import HowWebsiteWorks from "../components/HowWebsiteWork"
 
 
 const LandingPage = () => {
@@ -13,8 +15,9 @@ const LandingPage = () => {
         <Hero/>
         <TrendingProperties/>
         <Properties/>
-        
         <ServicesPage/>
+        <HowWebsiteWorks/>
+        <OurAgents/>
         <ClientReview/>
         <HowItWork/>
         <Blogs/>
